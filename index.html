@@ -468,8 +468,8 @@ The JSON must have this exact structure:
 
   } catch (err) {
     status.className = 'pdf-status error';
-    status.textContent = '❌ שגיאה בניתוח הדוח. נסה שוב או הזן נתונים ידנית.';
-    console.error(err);
+    status.textContent = '❌ שגיאה: ' + err.message;
+    console.error('Full error:', err);
   }
 });
 
